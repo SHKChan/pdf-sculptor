@@ -1,0 +1,41 @@
+td {
+    white-space: pre;
+}
+
+#pdfContainer {
+    width: 50%;
+    float: left;
+}
+
+#textContainer {
+    width: 50%;
+    float: left;
+}
+
+#container,
+#pdf,
+#text {
+    padding: 10px;
+    border: 1px solid;
+}
+
+.button-container {
+    display: flex;
+    /* Use flexbox to arrange elements horizontally */
+    align-items: center;
+    /* Vertically center elements within the container */
+}
+
+.button-container button {
+    margin-left: 20px;
+    margin-right: 20px;
+    /* Add some spacing between buttons and the span */
+}
+
+.pdf-header {
+    display: flex;
+    justify-content: left;
+    /* Spread elements horizontally */
+    align-items: center;
+    /* Vertically center elements */
+}

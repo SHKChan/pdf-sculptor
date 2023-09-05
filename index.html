@@ -2,43 +2,56 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet"
+          href="./page/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
-    <!-- Include PDF.js, PDF.worker.js from a CDN -->
+    <!-- Include PDF.js from a CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.worker.js"></script>
-    
+
     <meta charset="UTF-8"
           name="viewport"
           content="width=device-width, initial-scale=1.0">
     <title>PDF Sculptor</title>
-    <style>
-        td {
-            white-space: pre;
-        }
-    </style>
 </head>
 
 <body>
-    <h1>PDF Sculptor</h1>
-    <div style="border:1px solid">
-        <div id="drop">
-            <span>Drop PDF file here</span>
+    <div id="container">
+        <h1>PDF Sculptor</h1>
+        <div>
+            <div id="drop">
+                <span>Drop PDF file here</span>
+            </div>
+            <br>
+            <label for="upload">Or click here</label>
+            <input type="file"
+                   id="upload">
         </div>
-        <br>
-        <label for="pdf-file">Or click here</label>
-        <input type="file"
-               id="pdf-file">
     </div>
 
-    <label for="result">
-        <h2>Result</h2>
-    </label>
-    <textarea id="result"
-              style="width: 100%; height: 200px"></textarea>
-    <script src="./src/pdf-sculptor.js"
-            type="module"></script>
-    <script src="./index.js "
-            type="module"></script>
+    <div id="pdfContainer">
+        <div class="pdf-header">
+            <h2>PDF</h2>
+            <div class="button-container">
+                <button id="prev">Previous</button>
+                <button id="next">Next</button>
+                <span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+            </div>
+        </div>=
+        <canvas id="pdf"></canvas>
+    </div>
+
+    <div id="textContainer">
+        <label for="text">
+            <h2>Result</h2>
+        </label>
+        <textarea id="text"
+                  style="width: 100%; height: 200px"></textarea>
+    </div>
+
+    <script type="module"
+            src="./src/pdf-sculptor.js"></script>
+    <script type="module"
+            src="./page/index.js"></script>
 </body>
 
 </html>
