@@ -1,4 +1,4 @@
-import { extractTextFromPDF } from './pdf-sculptor.js';
+import { extractTextFromPDF } from './src/pdf-sculptor.js';
 
 
 function main() {
